@@ -1,17 +1,22 @@
 import type { AppProps } from "next/app";
 
 import "../styles/globals.css";
+import Link from "next/link";
 
-function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-col gap-4 py-6 px-4">
-        <h1 className="text-3xl font-bold">Fikri Karim</h1>
+      <div className="flex max-w-2xl flex-col gap-14 py-14 px-4">
+        <Link href="/">
+          <a className="text-3xl font-bold no-underline">Fikri Karim</a>
+        </Link>
 
-        <Component {...pageProps} />
+        <div>
+          <Component {...pageProps} />
+        </div>
 
         <div className="flex gap-1.5">
-          <a href="mailto:hello@fikrikarim.com" target="_top">
+          <a href="mailto:hello@fikrikarim.com" target="_blank">
             Email
           </a>
           &bull;
@@ -23,5 +28,3 @@ function App({ Component, pageProps }: AppProps) {
     </div>
   );
 }
-
-export default App;
