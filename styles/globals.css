@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gray-800 text-white;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  @apply text-sky-400 underline underline-offset-4 hover:decoration-2;
+}
