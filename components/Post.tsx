@@ -12,7 +12,7 @@ const mdxComponents = {
 export function Post(props): JSX.Element {
   return (
     <MDXProvider components={mdxComponents}>
-      <div className="prose-body:white prose prose-invert">
+      <div className="prose prose-invert">
         <h1>{props.meta.title}</h1>
 
         {props.children}
