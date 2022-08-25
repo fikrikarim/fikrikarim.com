@@ -21,5 +21,6 @@ export default withBundleAnalyzer(
   withMDX({
     reactStrictMode: true,
     swcMinify: true,
+    pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   })
 );
