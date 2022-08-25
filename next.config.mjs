@@ -1,20 +1,25 @@
-import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxImages from "remark-mdx-images";
 import createMDX from "@next/mdx";
+import createBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkFrontmatter, remarkMdxImages],
+    remarkPlugins: [remarkMdxImages],
     rehypePlugins: [],
     providerImportSource: "@mdx-js/react",
   },
 });
 
-export default withMDX({
-  reactStrictMode: true,
-  swcMinify: true,
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+const withBundleAnalyzer = createBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
 });
+
+export default withBundleAnalyzer(
+  withMDX({
+    reactStrictMode: true,
+    swcMinify: true,
+  })
+);
