@@ -1,29 +1,21 @@
 import type { AppProps } from "next/app";
 
+import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
+
 import "../styles/globals.css";
-import Link from "next/link";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="flex justify-center">
-      <div className="flex max-w-2xl flex-col gap-14 py-14 px-4">
-        <Link href="/">
-          <a className="text-3xl font-bold no-underline">Fikri Karim</a>
-        </Link>
+      <div className="flex max-w-2xl flex-grow flex-col gap-14 py-14 px-8">
+        <Header />
 
         <div>
           <Component {...pageProps} />
         </div>
 
-        <div className="flex gap-1.5">
-          <a href="mailto:hello@fikrikarim.com" target="_blank">
-            Email
-          </a>
-          &bull;
-          <a href="https://github.com/fikrikarim" rel="noopener noreferrer">
-            Github
-          </a>
-        </div>
+        <Footer />
       </div>
     </div>
   );
