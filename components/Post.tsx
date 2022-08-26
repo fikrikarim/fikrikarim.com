@@ -20,6 +20,12 @@ export function Post(props: {
       <Head>
         <title>{props.meta.title} - Fikri Karim</title>
         <meta name="description" content={props.meta.spoiler} />
+
+        <meta
+          property="og:title"
+          content={`${props.meta.spoiler} - Fikri Karim`}
+        />
+        <meta property="og:description" content={props.meta.spoiler} />
       </Head>
 
       <div className="prose prose-invert">

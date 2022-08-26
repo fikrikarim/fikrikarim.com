@@ -20,6 +20,7 @@ export default function Tulisan({ posts }: Props) {
     <div>
       <Head>
         <title>Tulisan Indonesia - Fikri Karim</title>
+        <meta property="og:title" content="Tulisan Indonesia - Fikri Karim" />
       </Head>
 
       <h1 className="text-2xl font-bold">Tulisan Indonesia</h1>

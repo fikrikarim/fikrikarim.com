@@ -6,6 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <title>Fikri Karim</title>
+          <meta property="og:title" content="Fikri Karim" />
+
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
             rel="stylesheet"
