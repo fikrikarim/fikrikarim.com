@@ -11,6 +11,13 @@ export function Footer(): JSX.Element {
         Github
       </a>
       &bull;
+      <a
+        href="https://www.linkedin.com/in/fikrikarim/"
+        rel="noopener noreferrer"
+      >
+        Linkedin
+      </a>
+      &bull;
       <Link href="tulisan">
         <a>Tulisan</a>
       </Link>
