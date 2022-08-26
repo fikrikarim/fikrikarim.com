@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Head from "next/head";
 import { PostEntry } from "../components/PostEntry";
 import { getAllPosts, PostMeta } from "../lib/post";
 
@@ -17,6 +18,10 @@ type Props = {
 export default function Tulisan({ posts }: Props) {
   return (
     <div>
+      <Head>
+        <title>Tulisan Indonesia - Fikri Karim</title>
+      </Head>
+
       <h1 className="text-2xl font-bold">Tulisan Indonesia</h1>
 
       <hr className="mt-2 mb-10" />
