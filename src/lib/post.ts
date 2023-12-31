@@ -11,11 +11,11 @@ export type PostMeta = {
 };
 
 export async function getAllPostSlugs(): Promise<string[]> {
-  return await getDirectories(path.join(process.cwd(), "pages"));
+  return await getDirectories(path.join(process.cwd(), "src", "app"));
 }
 
 export async function getPostMetaFromSlug(slug: string): Promise<PostMeta> {
-  return import(`../pages/${slug}/index.mdx`).then(({ meta }) => ({
+  return import(`../app/${slug}/page.mdx`).then(({ meta }) => ({
     ...meta,
     slug,
   }));

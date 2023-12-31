@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer(): JSX.Element {
   return (
-    <div className="flex gap-1.5">
+    <div className="flex gap-1">
       <a href="mailto:hello@fikrikarim.com" target="_blank" rel="noreferrer">
         Email
       </a>
@@ -18,9 +18,7 @@ export function Footer(): JSX.Element {
         Linkedin
       </a>
       &bull;
-      <Link href="tulisan">
-        <a>Tulisan</a>
-      </Link>
+      <Link href="tulisan">Tulisan</Link>
     </div>
   );
 }
