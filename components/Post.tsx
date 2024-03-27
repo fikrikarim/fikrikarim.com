@@ -29,7 +29,7 @@ export function Post(props: {
       </Head>
 
       <div className="prose prose-invert">
-        <h1>{props.meta.title}</h1>
+        <h1 className="text-3xl">{props.meta.title}</h1>
 
         {props.children}
       </div>
