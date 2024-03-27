@@ -1,0 +1,47 @@
+export const meta = {
+  title: "Uses",
+  date: "2024-03-28",
+  language: "standalone",
+  spoiler: "Lorem ipsum",
+};
+
+Hardware:
+- Macbook Pro 14" with M3 Pro, 18 GB RAM, 512 SSD
+
+
+Mac settings:
+- Trackpad
+	- Adjust trackpad speed to fast
+	- Enable trackpad tap to click
+- Dock
+	- Automatically hide and show Dock
+	- Disable "show suggested and decent app"
+- Setup [encrypted DNS](https://paulmillr.com/posts/encrypted-dns/)
+
+
+Software:
+- [Chrome](https://www.google.com/chrome/) for browser
+	- uBlock Origin is a dealbreaker of why I'm not using Safari.
+- [Obsidian](https://obsidian.md/) for taking notes
+	- iCloud sync
+	- Plugins
+		- [Paste URL into selection](https://github.com/denolehov/obsidian-url-into-selection)
+- [Rectangle](https://rectangleapp.com/) for window management
+- [Raycast](https://www.raycast.com/) to replace spotlight and for clipboard history
+- [1Password](https://1password.com/) for password manager
+- [VSCode](https://code.visualstudio.com/) as code editor
+- [ITerm](https://iterm2.com/) as terminal
+- [Bartender](https://www.macbartender.com/) for hiding bars
+- [Itsycal](https://www.mowglii.com/itsycal/) to replace the normal calendar
+- [Qbserve](https://qotoqot.com/qbserve/) for time tracking
+
+CLI:
+- [oh-my-zsh](https://ohmyz.sh/) for zsh
+- [battery](https://github.com/actuallymentor/battery) to limit charge to 80%
+- [Homebrew](https://brew.sh/) for package manager
+- [fnm](https://github.com/Schniz/fnm) for node manager
+
+
+import { Post } from "../../components/Post";
+
+export default (props) => <Post {...props} meta={meta} />;
