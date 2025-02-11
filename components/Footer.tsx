@@ -22,6 +22,10 @@ export function Footer(): JSX.Element {
         <a>Uses</a>
       </Link>
       &bull;
+      <Link href="portfolio">
+        <a>Portfolio</a>
+      </Link>
+      &bull;
       <Link href="tulisan">
         <a>Tulisan</a>
       </Link>
