@@ -18,14 +18,6 @@ export function Footer(): JSX.Element {
         Linkedin
       </a>
       &bull;
-      <Link href="uses">
-        <a>Uses</a>
-      </Link>
-      &bull;
-      <Link href="portfolio">
-        <a>Portfolio</a>
-      </Link>
-      &bull;
       <Link href="tulisan">
         <a>Tulisan</a>
       </Link>
