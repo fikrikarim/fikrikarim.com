@@ -1,6 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import Head from "next/head";
 import Image from "next/image";
+import dayjs from "dayjs";
 import { PostMeta } from "../lib/post";
 
 const ResponsiveImage = (props) => (
@@ -30,6 +31,9 @@ export function Post(props: {
 
       <div className="prose prose-invert">
         <h1 className="text-3xl">{props.meta.title}</h1>
+        <p className="text-sm text-slate-500">
+          {dayjs(props.meta.date).format("MMMM D, YYYY")}
+        </p>
 
         {props.children}
       </div>
