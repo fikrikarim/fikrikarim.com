@@ -1,0 +1,59 @@
+export const meta = {
+  title: 'Bule AI: Initial Release',
+  date: "2025-09-21",
+  language: "english",
+  spoiler: "Self-hosting a real-time AI app to help people practice speaking English",
+};
+
+import { Post } from "../../components/Post";
+
+export default (props) => <Post {...props} meta={meta} />;
+
+
+English is one factor that causes the cycle of poverty in developing countries.
+
+An English tutor is expensive. It's hard to justify paying an English teacher when you don't have any food on your plate. Without good English skills, people hit the ceiling quickly since they can't compete internationally.
+
+How do we break the cycle? Well, we need to provide equal access for everyone.
+
+Reading skills? Google is free. Listening skills? Youtube is free. Writing skills? Linkedin is free. Speaking skills? Hmm... There's no mainstream app that's totally free yet.
+
+This is why we've been working on this side project for multiple weekends, and now it's ready for beta access:
+
+<a href="https://app.bule.ai" target="_blank">https://app.bule.ai</a>
+
+A real-time AI app that you can use to practice your speaking skill.
+
+The quality is not as good as we'd like, but we released early to test whether this problem is worth solving. If no one is using this project, we'll move on to the next thing.
+
+---
+
+Some Q&A
+
+Q: Do you rent a server for this?
+
+A: No, we're self-hosting the AI server. We bought an RTX 5090, put it on my 5-year-old PC, and used Cloudflare tunnel to expose the PC to the internet. If you can't use the app, it might be because our ISP is down or because my PC is fried.
+
+Q: Why do you self-host the server?
+
+A: To reduce the cost, to improve the latency, and to create a justification for buying a $2500 GPU.
+
+Q: What's the difference between this and ChatGPT voice?
+
+A: The difference is that our app is much worse than ChatGPT, for real. If you're subscribed to ChatGPT, please just use that. We're making this for people that can't afford $20/mo, and they hit the limit on the free plan. OpenAI is optimizing for the quality. We're optimizing the cost so we can provide free access to everyone.
+
+Q: Who helped with this project?
+
+A: My wife, Dina Puteri, helped me with everything. Jundan Haris contributed a lot to the codebase. Dzulridha Khairul Majid and Indratno Adhi Pratama helped during the project’s inception.
+
+Q: Do you make this from scratch?
+
+A: No. The current version is built on top of the Unmute project by Kyutai. We're constantly trying new open source models and technologies to evaluate what's the best real-time AI model that we can serve cheaply.
+
+Q: Why is it called Bule AI?
+
+A: Bule means "foreigner" in Indonesian. People in Indonesia are forced to speak English when they meet a foreigner. We want to force you to speak English.
+
+Q: How can we help the project?
+
+A: Use the app, like, comment, share, send us feedback, or send us a GPU :D
