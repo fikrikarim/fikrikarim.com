@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Fikri Karim</title>
           <meta property="og:title" content="Fikri Karim" />
 
           <link
