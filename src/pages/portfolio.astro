@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Permission from "../components/portfolio/Permission.astro";
+import Kbri from "../components/portfolio/Kbri.astro";
+import Belikambing from "../components/portfolio/Belikambing.astro";
+import Disjoy from "../components/portfolio/Disjoy.astro";
+---
+
+<BaseLayout title="Portfolio - Fikri Karim">
+  <main class="prose prose-invert">
+    <h1>Portfolio</h1>
+
+    <h4>Projects:</h4>
+    <ul>
+      <li>
+        <a href="#permission">Dormitory Permission App</a>
+      </li>
+      <li>
+        <a href="#attendance">Attendance System for Indonesian Embassy</a>
+      </li>
+      <li>
+        <a href="#belikambing">
+          Belikambing - Marketplace for buying and selling livestocks
+        </a>
+      </li>
+      <li>
+        <a href="#disjoy">Disjoy - Reddit for the rest of the world</a>
+      </li>
+    </ul>
+
+    <Permission />
+    <Kbri />
+    <Belikambing />
+    <Disjoy />
+  </main>
+</BaseLayout>

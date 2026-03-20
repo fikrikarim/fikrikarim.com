@@ -1,0 +1,28 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import dayjs from "dayjs";
+
+interface Props {
+  title: string;
+  date: string;
+  spoiler: string;
+}
+
+const { title, date, spoiler } = Astro.props;
+const pageTitle = `${title} - Fikri Karim`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<BaseLayout title={pageTitle} description={spoiler}>
+  <Fragment slot="head">
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="article" />
+  </Fragment>
+  <div class="prose prose-invert">
+    <h1 class="text-3xl">{title}</h1>
+    <p class="text-sm text-slate-500">
+      {dayjs(date).format("MMMM D, YYYY")}
+    </p>
+    <slot />
+  </div>
+</BaseLayout>

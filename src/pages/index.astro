@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostEntry from "../components/PostEntry.astro";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => post.data.language === "english")
+  .sort(
+    (a, b) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+---
+
+<BaseLayout>
+  <div class="flex flex-col gap-10">
+    {
+      posts.map((post) => (
+        <PostEntry
+          title={post.data.title}
+          date={post.data.date}
+          spoiler={post.data.spoiler}
+          slug={post.id}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>
