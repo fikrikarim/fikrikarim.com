@@ -1,0 +1,21 @@
+---
+title: "Volocal: Fully local voice AI on iPhone"
+date: "2026-09-21"
+language: "english"
+spoiler: "Can we replace voice AI experience from RTX 5090 to iPhone 15?"
+---
+
+I'm [self-hosting a totally free voice AI](/bule-ai-initial-release) on my home server to help people learn speaking English. It has tens to hundreds of monthly active users, and I've been thinking on how to keep it free while making it sustainable.
+
+The ultimate way to reduce the operational costs is to run everything on-device, eliminating any server cost. I thought this was impossible at first, given that 6 months ago I needed an RTX 5090 to run these models in real-time.
+
+So I decided to replicate the voice AI experience to fully run locally on my iPhone 15, and to my surprise, it's working better than I expected.
+
+One key thing that makes the app possible is using [FluidAudio](https://github.com/FluidInference/FluidAudio) to offload STT and TTS to the Neural Engine, so llama.cpp can fully utilize the GPU without any contention.
+
+Repository: https://github.com/fikrikarim/volocal
+
+<video controls width="100%">
+  <source src="/volocal/volocal.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
