@@ -24,4 +24,18 @@ const posts = (await getCollection("blog"))
       ))
     }
   </div>
+  <script is:inline type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fikri Karim",
+    "url": "https://www.fikrikarim.com",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/fikrikarim",
+      "https://www.linkedin.com/in/fikrikarim/",
+      "https://x.com/fikrikarim"
+    ]
+  }
+  </script>
 </BaseLayout>

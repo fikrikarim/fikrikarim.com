@@ -27,4 +27,17 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
     </p>
     <slot />
   </div>
+  <script is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "datePublished": date,
+    "description": description || spoiler,
+    "url": canonicalUrl,
+    "author": {
+      "@type": "Person",
+      "name": "Fikri Karim",
+      "url": "https://www.fikrikarim.com"
+    }
+  })} type="application/ld+json" />
 </BaseLayout>
