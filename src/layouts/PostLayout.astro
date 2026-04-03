@@ -6,14 +6,16 @@ interface Props {
   title: string;
   date: string;
   spoiler: string;
+  description?: string;
+  lang?: string;
 }
 
-const { title, date, spoiler } = Astro.props;
+const { title, date, spoiler, description, lang = "en" } = Astro.props;
 const pageTitle = `${title} - Fikri Karim`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
-<BaseLayout title={pageTitle} description={spoiler}>
+<BaseLayout title={pageTitle} description={description || spoiler} lang={lang}>
   <Fragment slot="head">
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="article" />

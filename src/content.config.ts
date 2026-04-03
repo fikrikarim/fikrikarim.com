@@ -8,6 +8,7 @@ const blog = defineCollection({
     date: z.string(),
     language: z.enum(["english", "indonesian", "standalone"]),
     spoiler: z.string(),
+    description: z.string().optional(),
   }),
 });
 

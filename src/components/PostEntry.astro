@@ -11,7 +11,7 @@ interface Props {
 const { title, date, spoiler, slug } = Astro.props;
 ---
 
-<a href={`/${slug}`} class="group flex flex-col gap-1 no-underline">
+<a href={`/${slug}/`} class="group flex flex-col gap-1 no-underline">
   <h2 class="text-xl font-bold text-white group-hover:underline">
     {title}
   </h2>
